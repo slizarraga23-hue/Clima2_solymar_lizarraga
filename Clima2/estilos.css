@@ -1,0 +1,48 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa6b2;
+  --accent:#60a5fa;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#071027 0%, #0b1530 100%);
+  color:#e6eef6;
+  padding:1rem;
+}
+.container{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+header h1{margin:0;font-size:1.6rem}
+.subtitle{margin:0;color:var(--muted)}
+.search-section{display:flex;flex-direction:column;gap:.5rem}
+form{display:flex;gap:.5rem}
+input[type=text]{flex:1;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);color:inherit}
+button{padding:.6rem 1rem;border-radius:8px;border:none;background:var(--accent);color:#02203a;cursor:pointer}
+button:active{transform:translateY(1px)}
+.message{color:var(--muted)}
+.weather-section{display:flex;flex-direction:column;gap:1rem}
+.card{background:rgba(255,255,255,.02);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,8,23,.6)}
+.current-card{display:flex;align-items:center;gap:1rem}
+.current-info{display:flex;flex-direction:column}
+.weather-icon{width:72px;height:72px}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.forecast-item{padding:.8rem;border-radius:10px;background:rgba(255,255,255,.015);text-align:center}
+.small{font-size:.9rem;color:var(--muted)}
+.hidden{display:none}
+
+@media (max-width:720px){
+  .current-card{flex-direction:column;align-items:flex-start}
+  .forecast-grid{grid-template-columns:repeat(1,1fr)}
+}
+
+@media (min-width:721px) and (max-width:980px){
+  .forecast-grid{grid-template-columns:repeat(2,1fr)}
+}

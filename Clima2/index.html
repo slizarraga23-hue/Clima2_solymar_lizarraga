@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App - Proyecto</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Weather App</h1>
+      <p class="subtitle">Busca una ciudad y visualiza el clima actual y el pronóstico a 3 días.</p>
+    </header>
+
+    <section class="search-section">
+      <form id="search-form" aria-label="Buscar ciudad">
+        <input id="city-input" type="text" placeholder="Ej. Madrid, ES" required>
+        <button type="submit">Buscar</button>
+      </form>
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="weather-section" class="weather-section hidden">
+      <article id="current-card" class="card current-card" aria-live="polite"></article>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+
+    <footer>
+      <small>Solymar Michel Lizarraga Perez</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
